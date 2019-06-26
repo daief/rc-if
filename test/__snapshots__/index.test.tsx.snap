@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FI & If & ElseIf & Else If.if => false, ElseIf.elseIf => true, Else 1`] = `
+Array [
+  <div>
+    else if
+  </div>,
+  ";",
+]
+`;
+
+exports[`FI & If & ElseIf & Else If.if => true, ElseIf.elseIf => true, Else 1`] = `
+Array [
+  <div>
+    if
+  </div>,
+  ";",
+]
+`;
+
+exports[`FI & If & ElseIf & Else If.if => unset, ElseIf.elseIf => unset, Else 1`] = `
+Array [
+  <div>
+    else
+  </div>,
+  ";",
+]
+`;
+
+exports[`FI & If & ElseIf & Else Without FI, render nothing 1`] = `
+<div>
+  content
+</div>
+`;
+
+exports[`FI & If If.if => true 1`] = `
+Array [
+  <div>
+    content
+  </div>,
+  ";",
+]
+`;
+
+exports[`FI & If If.if => unset 1`] = `";"`;
+
+exports[`FI wrap FI.show => false 1`] = `";"`;
+
+exports[`FI wrap FI.show => true 1`] = `
+Array [
+  <div>
+    content
+  </div>,
+  ";",
+]
+`;
+
+exports[`FI wrap FI.show => unset 1`] = `
+Array [
+  <div>
+    content
+  </div>,
+  ";",
+]
+`;
+
+exports[`Multiply Nested 1`] = `
+Array [
+  <div>
+    content - 1
+  </div>,
+  <div>
+    content - 2
+  </div>,
+  <div>
+    content - 3
+  </div>,
+  <div>
+    content - 4
+  </div>,
+  ";",
+]
+`;
+
+exports[`Multiply Parallel 1`] = `
+Array [
+  <div>
+    content - 1
+  </div>,
+  <div>
+    content - 2
+  </div>,
+  <div>
+    content - 3
+  </div>,
+  <div>
+    content - 4
+  </div>,
+  ";",
+]
+`;
