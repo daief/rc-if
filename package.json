@@ -1,6 +1,6 @@
 {
   "name": "@axew/rc-if",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "main": "lib/index.js",
   "umd:main": "dist/index.js",
   "module": "es/index.js",
@@ -13,9 +13,6 @@
   },
   "peerDependencies": {
     "react": ">= 16.0.0"
-  },
-  "dependencies": {
-    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
@@ -41,5 +38,17 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "description": "A react component for write if-else in render",
+  "keywords": [
+    "react",
+    "rc-if",
+    "react-if",
+    "if-else",
+    "components"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
