@@ -4,12 +4,6 @@ export interface CommonProps {
   show?: boolean;
 }
 
-export interface RcIF extends React.SFC<CommonProps> {
-  If: React.SFC<{ if?: boolean }>;
-  ElseIf: React.SFC<{ elseIf?: boolean }>;
-  Else: React.SFC;
-}
-
 export const __NAME_IF__ = 'IF_name_if';
 export const __NAME_ELSE_IF__ = 'IF_name_else_if';
 export const __NAME_ELSE__ = 'IF_name_else';
@@ -77,6 +71,21 @@ export const Wrap: React.SFC<CommonProps> = ({ show = true, children }) => {
   );
 };
 
+export const If: React.SFC<{ if?: boolean }> = ({ children }) => <Wrap show>{children}</Wrap>;
+If.displayName = __NAME_IF__;
+export const ElseIf: React.SFC<{ elseIf?: boolean }> = ({ children }) => (
+  <Wrap show>{children}</Wrap>
+);
+ElseIf.displayName = __NAME_ELSE_IF__;
+export const Else: React.SFC = ({ children }) => <Wrap show>{children}</Wrap>;
+Else.displayName = __NAME_ELSE__;
+
+export interface RcIF extends React.SFC<CommonProps> {
+  If: typeof If;
+  ElseIf: typeof ElseIf;
+  Else: typeof Else;
+}
+
 /**
  * FI is as a wrapper component. `FI` is used to distinguish it from `If`.
  */
@@ -86,9 +95,6 @@ export const FI: RcIF = props => (
   </ctx.Provider>
 );
 
-FI.If = ({ children }) => <Wrap show>{children}</Wrap>;
-FI.If.displayName = __NAME_IF__;
-FI.ElseIf = ({ children }) => <Wrap show>{children}</Wrap>;
-FI.ElseIf.displayName = __NAME_ELSE_IF__;
-FI.Else = ({ children }) => <Wrap show>{children}</Wrap>;
-FI.Else.displayName = __NAME_ELSE__;
+FI.If = If;
+FI.ElseIf = ElseIf;
+FI.Else = Else;
