@@ -1,10 +1,16 @@
 {
   "name": "@axew/rc-if",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "umd:main": "dist/index.js",
   "module": "es/index.js",
   "license": "MIT",
+  "homepage": "https://github.com/daief/rc-if",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daief/rc-if"
+  },
+  "author": "daief <https://github.com/daief>",
   "scripts": {
     "build": "rollup -c",
     "prebuild": "rimraf dist es lib types",

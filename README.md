@@ -51,5 +51,33 @@ interface RcIF extends React.SFC<{ show?: boolean }> {
   Else: React.SFC;
 }
 
-declare const FI: RcIF
+declare const FI: RcIF;
 ```
+
+### FI
+
+The following components cannot work without FI wrapping. When use in nested, the following components can also be wrap.
+
+| Property | Description            | Type    | Default |
+| -------- | ---------------------- | ------- | ------- |
+| show     | render children or not | boolean | true    |
+
+### If
+
+Render when if.
+
+| Property | Description            | Type    | Default |
+| -------- | ---------------------- | ------- | ------- |
+| if       | render children or not | boolean | -       |
+
+### ElseIf
+
+Render when elseIf.
+
+| Property | Description            | Type    | Default |
+| -------- | ---------------------- | ------- | ------- |
+| elseIf   | render children or not | boolean | -       |
+
+### Else
+
+Render when else.
