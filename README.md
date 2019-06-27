@@ -1,5 +1,7 @@
 ## rc-if
 
+[![Build Status](https://travis-ci.org/daief/rc-if.svg?branch=master)](https://travis-ci.org/daief/rc-if)
+
 rc-if is a react component for write if-else in render.
 
 ## Usage
