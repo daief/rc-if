@@ -1,29 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FI & If & ElseIf & Else If.if => false, ElseIf.elseIf => true, Else 1`] = `
-Array [
-  <div>
-    else if
-  </div>,
-  ";",
-]
+<div>
+  else if
+</div>
 `;
 
 exports[`FI & If & ElseIf & Else If.if => true, ElseIf.elseIf => true, Else 1`] = `
-Array [
-  <div>
-    if
-  </div>,
-  ";",
-]
+<div>
+  if
+</div>
 `;
 
 exports[`FI & If & ElseIf & Else If.if => unset, ElseIf.elseIf => unset, Else 1`] = `
+<div>
+  else
+</div>
+`;
+
+exports[`FI & If & ElseIf & Else Only FI(or If, ElseIf, Else) wraps and is in parent and child will render 1`] = `
 Array [
   <div>
-    else
+    <div>
+      content
+    </div>
   </div>,
-  ";",
+  <div>
+    content
+  </div>,
 ]
 `;
 
@@ -34,34 +38,25 @@ exports[`FI & If & ElseIf & Else Without FI, render nothing 1`] = `
 `;
 
 exports[`FI & If If.if => true 1`] = `
-Array [
-  <div>
-    content
-  </div>,
-  ";",
-]
+<div>
+  content
+</div>
 `;
 
-exports[`FI & If If.if => unset 1`] = `";"`;
+exports[`FI & If If.if => unset 1`] = `null`;
 
-exports[`FI wrap FI.show => false 1`] = `";"`;
+exports[`FI wrap FI.show => false 1`] = `null`;
 
 exports[`FI wrap FI.show => true 1`] = `
-Array [
-  <div>
-    content
-  </div>,
-  ";",
-]
+<div>
+  content
+</div>
 `;
 
 exports[`FI wrap FI.show => unset 1`] = `
-Array [
-  <div>
-    content
-  </div>,
-  ";",
-]
+<div>
+  content
+</div>
 `;
 
 exports[`Multiply Nested 1`] = `
@@ -78,7 +73,6 @@ Array [
   <div>
     content - 4
   </div>,
-  ";",
 ]
 `;
 
@@ -96,6 +90,5 @@ Array [
   <div>
     content - 4
   </div>,
-  ";",
 ]
 `;

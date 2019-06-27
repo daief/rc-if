@@ -188,6 +188,47 @@ describe('FI & If & ElseIf & Else', () => {
     });
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('Only FI(or If, ElseIf, Else) wraps and is in parent and child will render', () => {
+    const CArray = Array(4)
+      .fill(1)
+      .map(() => getComponent());
+    const [C1, C2, C3, C4] = CArray;
+
+    const component = renderer.create(
+      <FI>
+        <div>
+          <If if>
+            <C1 />
+            <If if>
+              <If if>
+                <C2 />
+              </If>
+            </If>
+          </If>
+          <FI>
+            <If />
+            <ElseIf />
+            <Else>
+              <C3 />
+            </Else>
+          </FI>
+        </div>
+        <If if>
+          <C4 />
+        </If>
+      </FI>,
+    );
+
+    CArray.forEach((C, i) => {
+      if (i < 2) {
+        expect(() => component.root.findByType(C)).toThrow();
+      } else {
+        expect(component.root.findByType(C).type).toBe(C);
+      }
+    });
+    expect(component.toJSON()).toMatchSnapshot();
+  });
 });
 
 describe('Multiply', () => {
