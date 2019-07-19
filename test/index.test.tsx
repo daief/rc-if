@@ -1,10 +1,10 @@
+/**
+ * base API test
+ */
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { FI, If, ElseIf, Else } from '../src';
-
-const getComponent = (content = 'content'): React.SFC => () => <div>{content}</div>;
-
-const renderComponent = (content = 'content') => React.createElement(getComponent(content));
+import { getComponent, renderComponent } from './utils';
 
 describe('FI wrap', () => {
   function renderTest(show: any) {
@@ -21,7 +21,7 @@ describe('FI wrap', () => {
   }
 
   it('FI.show => unset', () => {
-    const { component, content } = renderTest(undefined);
+    const { component, content } = renderTest(void 0);
     expect(component.root.findByType(content).type).toBe(content);
     expect(component.toJSON()).toMatchSnapshot();
   });
