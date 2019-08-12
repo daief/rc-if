@@ -60,7 +60,7 @@ export const Wrap: React.SFC<CommonProps> = ({ show = true, children }) => {
     return child;
   });
 
-  return <>{renderArray}</>;
+  return renderArray as any;
 };
 
 function getChildComponent<T = {}>(): React.SFC<T> {
